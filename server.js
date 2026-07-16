@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import path from "path";
 
 import connectDB from "./config/db.js";
 
@@ -32,14 +31,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
-
-// ===============================
-// Static Uploads Folder
-// ===============================
-app.use(
-  "/uploads",
-  express.static(path.join(process.cwd(), "uploads"))
-);
 
 // ===============================
 // Debug Middleware

@@ -216,20 +216,19 @@ export const updateProfile = async (req, res) => {
     user.github = req.body.github || "";
     user.linkedin = req.body.linkedin || "";
 
-    // Skills (Future Ready)
-
+    // Skills
     if (req.body.skills) {
 
       user.skills = JSON.parse(req.body.skills);
 
     }
 
-    // Profile Image Upload
-
+    // ===============================
+    // Profile Image Upload (Cloudinary)
+    // ===============================
     if (req.file) {
 
-      user.profileImage =
-        `${req.protocol}://${req.get("host")}/uploads/${req.file.filename}`;
+      user.profileImage = req.file.path;
 
     }
 
