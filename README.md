@@ -127,25 +127,6 @@ npm run dev
 
 ---
 
-## 📸 Image Upload
-
-Profile images are uploaded using **Cloudinary**.
-
-Supported formats:
-
-- JPG
-- JPEG
-- PNG
-- WEBP
-
-Maximum Size:
-
-```
-5 MB
-```
-
----
-
 
 ## 🚀 Deployment
 
